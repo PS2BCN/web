@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDK03JE9MG"></script>
     <script>
@@ -11,16 +11,16 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terra Bike Tours | High Performance Green Rental</title>
+    <title>Terra Bike Tours | High Performance Premium Rental</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary-green: #27ae60;      /* Verde vibrante */
-            --light-green: #f4f9f6;       /* Fondo suave */
-            --dark-green: #0a2e1a;        /* Texto profundo */
-            --overlay: rgba(10, 46, 26, 0.65); /* Filtro verde sobre imagen */
+            --primary-green: #27ae60;
+            --light-green: #f4f9f6;
+            --dark-green: #0a2e1a;
+            --overlay: rgba(10, 46, 26, 0.65);
         }
 
         * {
@@ -36,10 +36,33 @@
             overflow-x: hidden;
         }
 
-        /* Sección Principal (Hero) */
+        /* Top contact bar */
+        .top-contact {
+            background-color: var(--dark-green);
+            color: #a5d6b7;
+            padding: 10px 10%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        .top-contact a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+
+        .top-contact a:hover {
+            color: var(--primary-green);
+        }
+
+        /* Hero Section */
         .hero {
             position: relative;
-            height: 90vh;
+            height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -52,15 +75,6 @@
             color: white;
         }
 
-        .brand-top {
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            color: #a5d6b7;
-        }
-
         .hero h1 {
             font-size: clamp(3rem, 10vw, 6.5rem);
             font-weight: 900;
@@ -70,15 +84,6 @@
             letter-spacing: -3px;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 500px;
-            font-weight: 300;
-            margin-bottom: 40px;
-            color: #e0e0e0;
-        }
-
-        /* Botón de Acción */
         .cta-button {
             background-color: var(--primary-green);
             color: white;
@@ -96,34 +101,55 @@
         .cta-button:hover {
             background-color: #2ecc71;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        /* Sección de Características */
+        /* Features Section */
         .specs {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            padding: 100px 10%;
+            padding: 80px 10%;
             background: var(--light-green);
-            gap: 60px;
+            gap: 40px;
         }
 
         .spec-card h3 {
             font-size: 1.5rem;
             font-weight: 900;
-            margin-bottom: 15px;
             text-transform: uppercase;
+            margin-bottom: 15px;
             color: var(--dark-green);
         }
 
         .spec-card p {
             color: #4a5a51;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
-        /* Footer */
+        /* Footer Info */
+        .footer-info {
+            background: white;
+            padding: 80px 10%;
+            border-top: 1px solid #eee;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .info-block h4 {
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-bottom: 15px;
+            color: var(--dark-green);
+        }
+
+        .info-block p, .info-block a {
+            color: #4a5a51;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
         footer {
-            padding: 60px 10%;
+            padding: 40px 10%;
             background: var(--dark-green);
             color: #5d8a6e;
             text-align: center;
@@ -132,11 +158,7 @@
             text-transform: uppercase;
         }
 
-        /* Animación suave */
-        .fade-in {
-            animation: fadeInAnim 1s ease-out forwards;
-        }
-
+        .fade-in { animation: fadeInAnim 1s ease-out forwards; }
         @keyframes fadeInAnim {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -145,31 +167,53 @@
 </head>
 <body>
 
+    <div class="top-contact">
+        <span>Barcelona, Spain</span>
+        <div>
+            <a href="tel:+34934121947">+34 934 160 805</a>
+            <a href="mailto:info@terrabiketours.com">info@terrabiketours.com</a>
+        </div>
+    </div>
+
     <section class="hero">
-        <div class="brand-top fade-in">Terra Bike Tours | Barcelona</div>
         <h1 class="fade-in">RIDE THE<br>GREEN.</h1>
-        <p class="fade-in">Bicicletas de alta gama y experiencias premium diseñadas para el máximo rendimiento y sostenibilidad.</p>
-        
-        <a href="https://app.booking.bike.rent/book?store=terrabiketours" class="cta-button fade-in">RESERVAR AHORA</a>
+        <p class="fade-in" style="max-width: 500px; margin-bottom: 40px; color: #e0e0e0; font-size: 1.2rem;">High-performance rentals and premium experiences engineered for speed and sustainability.</p>
+        <a href="https://app.booking.bike.rent/book?store=terrabiketours" class="cta-button fade-in">BOOK NOW</a>
     </section>
 
     <section class="specs">
         <div class="spec-card">
             <h3>Elite Fleet</h3>
-            <p>Bicicletas de carbono de última generación, ajustadas por mecánicos profesionales antes de cada salida.</p>
+            <p>Access the world's finest machines, professionally tuned and ready for the road.</p>
         </div>
         <div class="spec-card">
             <h3>Pro Setup</h3>
-            <p>Configuración personalizada, elección de pedales y tracks GPS incluidos en todas tus rutas.</p>
+            <p>Custom bike fitting, pedal options, and GPS tracks included with every rental.</p>
         </div>
         <div class="spec-card">
             <h3>The Hub</h3>
-            <p>Ubicados en el corazón del ciclismo, listos para que tu única preocupación sea disfrutar del asfalto.</p>
+            <p>Our Barcelona headquarters is the perfect starting point for your most epic rides.</p>
         </div>
     </section>
 
+    <div class="footer-info">
+        <div class="info-block">
+            <h4>Visit Us</h4>
+            <p>Calle València, 337<br>08009 Barcelona, Spain</p>
+        </div>
+        <div class="info-block">
+            <h4>Contact</h4>
+            <p>T: <a href="tel:+34934121947">+34 934 160 805</a><br>
+               E: <a href="mailto:info@terrabiketours.com">info@terrabiketours.com</a></p>
+        </div>
+        <div class="info-block">
+            <h4>Opening Hours</h4>
+            <p>Monday - Sunday<br>09:00h - 19:00h</p>
+        </div>
+    </div>
+
     <footer>
-        &copy; 2026 TERRA BIKE TOURS. ENGINEERED FOR CYCLISTS.
+        &copy; 2026 TERRA BIKE TOURS. ENGINEERED FOR PERFORMANCE.
     </footer>
 
 </body>
