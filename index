@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDK03JE9MG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DDK03JE9MG');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Bike Tours | High Performance Green Rental</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #27ae60;      /* Verde vibrante */
+            --light-green: #f4f9f6;       /* Fondo suave */
+            --dark-green: #0a2e1a;        /* Texto profundo */
+            --overlay: rgba(10, 46, 26, 0.65); /* Filtro verde sobre imagen */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--dark-green);
+            overflow-x: hidden;
+        }
+
+        /* Sección Principal (Hero) */
+        .hero {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 10%;
+            background: linear-gradient(var(--overlay), var(--overlay)), 
+                        url('https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .brand-top {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            color: #a5d6b7;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 10vw, 6.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 0.9;
+            margin-bottom: 25px;
+            letter-spacing: -3px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 500px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+        }
+
+        /* Botón de Acción */
+        .cta-button {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 20px 50px;
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #2ecc71;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Sección de Características */
+        .specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            padding: 100px 10%;
+            background: var(--light-green);
+            gap: 60px;
+        }
+
+        .spec-card h3 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: var(--dark-green);
+        }
+
+        .spec-card p {
+            color: #4a5a51;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 10%;
+            background: var(--dark-green);
+            color: #5d8a6e;
+            text-align: center;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Animación suave */
+        .fade-in {
+            animation: fadeInAnim 1s ease-out forwards;
+        }
+
+        @keyframes fadeInAnim {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="brand-top fade-in">Terra Bike Tours | Barcelona</div>
+        <h1 class="fade-in">RIDE THE<br>GREEN.</h1>
+        <p class="fade-in">Bicicletas de alta gama y experiencias premium diseñadas para el máximo rendimiento y sostenibilidad.</p>
+        
+        <a href="https://app.booking.bike.rent/book?store=terrabiketours" class="cta-button fade-in">RESERVAR AHORA</a>
+    </section>
+
+    <section class="specs">
+        <div class="spec-card">
+            <h3>Elite Fleet</h3>
+            <p>Bicicletas de carbono de última generación, ajustadas por mecánicos profesionales antes de cada salida.</p>
+        </div>
+        <div class="spec-card">
+            <h3>Pro Setup</h3>
+            <p>Configuración personalizada, elección de pedales y tracks GPS incluidos en todas tus rutas.</p>
+        </div>
+        <div class="spec-card">
+            <h3>The Hub</h3>
+            <p>Ubicados en el corazón del ciclismo, listos para que tu única preocupación sea disfrutar del asfalto.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 TERRA BIKE TOURS. ENGINEERED FOR CYCLISTS.
+    </footer>
+
+</body>
+</html>
