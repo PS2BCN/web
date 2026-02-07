@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDK03JE9MG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DDK03JE9MG');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Bike Tours | High Performance Premium Rental</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #27ae60;
+            --light-green: #f4f9f6;
+            --dark-green: #0a2e1a;
+            --overlay: rgba(10, 46, 26, 0.65);
+        }
+
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--dark-green);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Bar Centrada */
+        .top-contact {
+            background-color: var(--dark-green);
+            color: #a5d6b7;
+            padding: 12px 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        @media (min-width: 768px) {
+            .top-contact { flex-direction: row; justify-content: center; gap: 40px; }
+        }
+
+        .top-right { display: flex; align-items: center; gap: 25px; }
+        .top-right a { color: white; text-decoration: none; transition: 0.3s; font-weight: 400; }
+        .top-right a:hover { color: var(--primary-green); }
+
+        /* Selector de Idiomas */
+        .lang-selector { display: flex; gap: 15px; align-items: center; border-left: 1px solid #2d4f3b; padding-left: 20px; }
+        .lang-item { 
+            cursor: pointer; 
+            opacity: 0.5; 
+            transition: 0.3s;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: white;
+        }
+        .lang-item.active { opacity: 1; color: var(--primary-green); }
+        .lang-item:hover { opacity: 1; }
+
+        /* Hero Section */
+        .hero {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+            background: linear-gradient(var(--overlay), var(--overlay)), 
+                        url('https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center; color: white;
+        }
+
+        .hero h1 { 
+            font-size: clamp(3rem, 10vw, 6.5rem); 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            line-height: 0.9; 
+            margin-bottom: 25px; 
+            letter-spacing: -3px; 
+        }
+
+        .cta-button {
+            background-color: var(--primary-green);
+            color: white; padding: 20px 50px; font-weight: 800; text-decoration: none; 
+            text-transform: uppercase; font-size: 1rem; border-radius: 2px;
+            transition: 0.3s; display: inline-block;
+        }
+        .cta-button:hover { background-color: #2ecc71; transform: translateY(-3px); }
+
+        /* Booking Section */
+        #booking-section { width: 100%; padding: 0; background: var(--light-green); }
+        .iframe-container { width: 100%; height: 950px; border: none; }
+        iframe { width: 100%; height: 100%; border: none; }
+
+        /* Specs */
+        .specs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); padding: 80px 10%; gap: 40px; background: var(--light-green); text-align: center; }
+        .spec-card h3 { font-size: 1.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; color: var(--dark-green); }
+        .spec-card p { color: #4a5a51; line-height: 1.6; }
+
+        /* Footer Info Centrado */
+        .footer-info { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            padding: 80px 10%; 
+            gap: 40px; 
+            border-top: 1px solid #eee; 
+            background: white; 
+            text-align: center;
+        }
+        .info-block h4 { text-transform: uppercase; font-weight: 900; margin-bottom: 15px; color: var(--dark-green); }
+        .footer-link { color: #4a5a51; text-decoration: none; transition: 0.3s; }
+        .footer-link:hover { color: var(--primary-green); }
+
+        footer { padding: 40px 10%; background: var(--dark-green); color: #5d8a6e; text-align: center; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; }
+
+        .fade-in { animation: fadeInAnim 1s ease-out forwards; }
+        @keyframes fadeInAnim {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-contact">
+        <span id="top-loc-text">BARCELONA, SPAIN</span>
+        <div class="top-right">
+            <a href="mailto:info@terrabiketours.com">INFO@TERRABIKETOURS.COM</a>
+            <div class="lang-selector">
+                <div class="lang-item active" onclick="changeLang('en', this)">ENG</div>
+                <div class="lang-item" onclick="changeLang('es', this)">ESP</div>
+                <div class="lang-item" onclick="changeLang('ca', this)">CAT</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <h1 id="hero-title" class="fade-in">RIDE THE<br>GREEN</h1>
+        <p id="hero-desc" class="fade-in" style="max-width: 600px; margin-bottom: 40px; color: #e0e0e0; font-size: 1.2rem;">High-performance rentals and premium experiences engineered for speed and sustainability.</p>
+        <a href="#booking-section" class="cta-button fade-in" id="btn-book">BOOK NOW</a>
+    </section>
+
+    <section id="booking-section">
+        <div class="iframe-container">
+            <iframe id="booking-iframe" src="https://app.booking.bike.rent/book?store=terrabiketours&lang=en" title="Booking"></iframe>
+        </div>
+    </section>
+
+    <section class="specs">
+        <div class="spec-card">
+            <h3 id="spec1-t">Elite Fleet</h3>
+            <p id="spec1-p">Access the world's finest machines, professionally tuned and ready for the road.</p>
+        </div>
+        <div class="spec-card">
+            <h3 id="spec2-t">Pro Setup</h3>
+            <p id="spec2-p">Custom bike fitting, pedal options, and GPS tracks included with every rental.</p>
+        </div>
+        <div class="spec-card">
+            <h3 id="spec3-t">The Hub</h3>
+            <p id="spec3-p">Our Barcelona headquarters is the perfect starting point for your most epic rides.</p>
+        </div>
+    </section>
+
+    <div class="footer-info">
+        <div class="info-block">
+            <h4 id="foot-loc">Visit Us</h4>
+            <a href="https://maps.google.com/?q=Carrer+de+València+337+Barcelona" target="_blank" class="footer-link">Carrer de València, 337<br>08009 Barcelona, Spain</a>
+        </div>
+        <div class="info-block">
+            <h4 id="foot-cont">Contact</h4>
+            <p>T: +34 934 160 805<br>E: <a href="mailto:info@terrabiketours.com" class="footer-link">info@terrabiketours.com</a></p>
+        </div>
+        <div class="info-block">
+            <h4 id="foot-hour">Opening Hours</h4>
+            <p id="hours-p">Monday - Saturday<br>10:00h - 19:00h</p>
+        </div>
+    </div>
+
+    <footer>© 2026 TERRA BIKE TOURS. ENGINEERED FOR PERFORMANCE.</footer>
+
+    <script>
+        const translations = {
+            en: {
+                topLoc: "BARCELONA, SPAIN",
+                heroT: "RIDE THE<br>GREEN", heroD: "High-performance rentals and premium experiences engineered for speed and sustainability.",
+                btn: "BOOK NOW", s1t: "Elite Fleet", s1p: "Access the world's finest machines, professionally tuned.",
+                s2t: "Pro Setup", s2p: "Custom bike fitting, pedal options, and GPS tracks included.",
+                s3t: "The Hub", s3p: "Our Barcelona headquarters is the perfect starting point.",
+                floc: "Visit Us", fhou: "Opening Hours", hours: "Monday - Saturday<br>10:00h - 19:00h"
+            },
+            es: {
+                topLoc: "BARCELONA, ESPAÑA",
+                heroT: "RIDE THE<br>GREEN", heroD: "Alquileres de alto rendimiento y experiencias premium diseñadas para la velocidad y la sostenibilidad.",
+                btn: "RESERVA AHORA", s1t: "Flota de Élite", s1p: "Accede a las mejores máquinas del mundo, ajustadas profesionalmente.",
+                s2t: "Ajuste Pro", s2p: "Bike fitting, opciones de pedales y rutas GPS incluidas.",
+                s3t: "El Hub", s3p: "Nuestra sede en Barcelona es el punto de partida perfecto.",
+                floc: "Visítanos", fhou: "Horario", hours: "Lunes - Sábado<br>10:00h - 19:00h"
+            },
+            ca: {
+                topLoc: "BARCELONA, CATALUNYA",
+                heroT: "RIDE THE<br>GREEN", heroD: "Lloguers d'alt rendiment i experiències prèmium dissenyades per a la velocitat i la sostenibilitat.",
+                btn: "RESERVA ARA", s1t: "Flota d'Elit", s1p: "Accedeix a les millors màquines del món, ajustades profesionalment.",
+                s2t: "Ajust Pro", s2p: "Bike fitting, opcions de pedals i rutes GPS incloses.",
+                s3t: "El Hub", s3p: "La nostra seu a Barcelona és el punt de partida perfecte.",
+                floc: "Visita'ns", fhou: "Horari", hours: "Dilluns - Dissabte<br>10:00h - 19:00h"
+            }
+        };
+
+        function changeLang(lang, element) {
+            document.getElementById('top-loc-text').innerText = translations[lang].topLoc;
+            document.getElementById('hero-title').innerHTML = translations[lang].heroT;
+            document.getElementById('hero-desc').innerText = translations[lang].heroD;
+            document.getElementById('btn-book').innerText = translations[lang].btn;
+            document.getElementById('spec1-t').innerText = translations[lang].s1t;
+            document.getElementById('spec1-p').innerText = translations[lang].s1p;
+            document.getElementById('spec2-t').innerText = translations[lang].s2t;
+            document.getElementById('spec2-p').innerText = translations[lang].s2p;
+            document.getElementById('spec3-t').innerText = translations[lang].s3t;
+            document.getElementById('spec3-p').innerText = translations[lang].s3p;
+            document.getElementById('foot-loc').innerText = translations[lang].floc;
+            document.getElementById('foot-hour').innerText = translations[lang].fhou;
+            document.getElementById('hours-p').innerHTML = translations[lang].hours;
+
+            const iframe = document.getElementById('booking-iframe');
+            iframe.src = `https://app.booking.bike.rent/book?store=terrabiketours&lang=${lang}`;
+
+            document.querySelectorAll('.lang-item').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>
